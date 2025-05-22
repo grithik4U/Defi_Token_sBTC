@@ -22,30 +22,71 @@
 
 ---
 
-## Table of Contents
+Project Overview: Tokenizing Synthetic Bitcoin (sBTC) Using Ethereum, Chainlink, and Remix
+🧭 Goal of the Project
+To explore the concept of tokenizing real-world financial assets by creating a smart contract that issues a synthetic version of Bitcoin (sBTC) — a digital token whose value is anchored to the real-world BTC price using live data from Chainlink price oracles.
 
-- [Overview](#overview)
-- [Getting Started](#getting-started)
-    - [Prerequisites](#prerequisites)
-    - [Installation](#installation)
-    - [Usage](#usage)
-    - [Testing](#testing)
+This project demonstrates:
 
----
+The basics of real-world asset (RWA) tokenization
 
-## Overview
+Collateralized minting using ETH
 
-**Defi_Token_sBTC** is a cutting-edge developer tool that empowers users to create and manage synthetic Bitcoin tokens (sBTC) on the blockchain, bridging traditional assets with decentralized finance (DeFi).
+Oracle integration for real-time pricing
 
-**Why Defi_Token_sBTC?**
+Smart contract development and deployment on the Sepolia testnet
 
-This project aims to enhance financial accessibility and innovation in the DeFi ecosystem. The core features include:
+🛠️ Tech Stack & Tools
+Component	Description
+Solidity	Smart contract programming language
+Remix IDE	Web-based IDE for Solidity development
+MetaMask	Wallet used for deploying and transacting
+Sepolia Testnet	Ethereum test network for testing
+Chainlink	Oracle network to fetch ETH/USD and BTC/USD prices
+OpenZeppelin	Standard ERC-20 token implementation
 
-- 💰 **Price Feed Integration:** Ensures accurate valuation of synthetic assets with real-time data from oracles.
-- 🔗 **ERC-20 Compliance:** Facilitates seamless integration with wallets and exchanges, enhancing accessibility and liquidity.
-- ⛏️ **Collateralized Minting:** Allows users to mint sBTC by depositing Ether, bridging traditional assets with DeFi.
-- ⚙️ **Automated Deployment:** Simplifies the deployment process across Ethereum networks, reducing manual errors.
-- 🛠️ **Robust Error Handling:** Provides clear feedback mechanisms for developers, improving debugging and user experience.
+🔗 What the Smart Contract Does
+Mints a synthetic BTC token (sBTC) when a user sends ETH
+
+Uses Chainlink’s ETH/USD and BTC/USD price feeds to calculate:
+sBTC minted = (ETH deposited in USD) / (BTC price in USD)
+Ensures the token has 18 decimals like ETH
+
+All minting happens on-chain, with no admin intervention
+
+The contract holds the ETH as collateral, simulating how DeFi protocols back synthetic assets
+
+🔐 Smart Contract Highlights
+Uses AggregatorV3Interface from Chainlink for price data
+
+Inherits ERC20 from OpenZeppelin
+
+mintWithEther() is the core function:
+
+Takes in ETH
+
+Fetches live prices
+
+Calculates how much sBTC to mint
+
+Mints and assigns tokens to the sender
+
+✅ What Was Achieved
+Contract successfully deployed and verified on Sepolia
+
+Live Chainlink oracles integrated
+
+ETH deposited → real-time price logic executed → sBTC minted
+
+Transactions and token balance confirmed on Etherscan
+
+🧠 Key Learnings
+Precision matters: tiny ETH amounts can result in zero tokens minted due to Solidity’s integer math
+
+Chainlink oracles are easy to integrate but require correct price scaling (1e8)
+
+Even simple DeFi contracts involve careful math and data validation
+
 
 ---
 
