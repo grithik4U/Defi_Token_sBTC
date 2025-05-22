@@ -26,24 +26,26 @@ Project Overview: Tokenizing Synthetic Bitcoin (sBTC) Using Ethereum, Chainlink,
 🧭 Goal of the Project
 To explore the concept of tokenizing real-world financial assets by creating a smart contract that issues a synthetic version of Bitcoin (sBTC) — a digital token whose value is anchored to the real-world BTC price using live data from Chainlink price oracles.
 
+---
+
 This project demonstrates:
-
 The basics of real-world asset (RWA) tokenization
-
 Collateralized minting using ETH
-
 Oracle integration for real-time pricing
-
 Smart contract development and deployment on the Sepolia testnet
 
+---
+
 🛠️ Tech Stack & Tools
-Component	Description
-Solidity	Smart contract programming language
-Remix IDE	Web-based IDE for Solidity development
-MetaMask	Wallet used for deploying and transacting
-Sepolia Testnet	Ethereum test network for testing
-Chainlink	Oracle network to fetch ETH/USD and BTC/USD prices
-OpenZeppelin	Standard ERC-20 token implementation
+Component	      Description
+Solidity	      Smart contract programming language
+Remix IDE	      Web-based IDE for Solidity development
+MetaMask	      Wallet used for deploying and transacting
+Sepolia         Testnet	Ethereum test network for testing
+Chainlink	      Oracle network to fetch ETH/USD and BTC/USD prices
+OpenZeppelin  	Standard ERC-20 token implementation
+
+---
 
 🔗 What the Smart Contract Does
 Mints a synthetic BTC token (sBTC) when a user sends ETH
@@ -91,7 +93,7 @@ Even simple DeFi contracts involve careful math and data validation
 ---
 
 - **Programming Language:** Solidity
-  <img width="1492" alt="Screenshot 2025-05-22 at 18 04 11" src="https://github.com/user-attachments/assets/ed237a71-9f08-4972-b3a2-4211142f51bc" />
+<img width="1492" alt="Screenshot 2025-05-22 at 18 04 11" src="https://github.com/user-attachments/assets/ed237a71-9f08-4972-b3a2-4211142f51bc" />
 <img width="1492" alt="Screenshot 2025-05-22 at 18 04 36" src="https://github.com/user-attachments/assets/896fe2ed-0987-4d8a-90d8-eef879add9e7" />
 <img width="1492" alt="Screenshot 2025-05-22 at 18 04 54" src="https://github.com/user-attachments/assets/7ddd83ca-acec-4c3f-8547-8b5d567c7e51" />
 <img width="1492" alt="Screenshot 2025-05-22 at 18 05 36" src="https://github.com/user-attachments/assets/72f67e3b-202e-477c-b9ae-72a4b0606b13" />
