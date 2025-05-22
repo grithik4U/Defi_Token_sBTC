@@ -15,8 +15,6 @@
 
 <em>Built with the tools and technologies:</em>
 
-<img src="https://img.shields.io/badge/JSON-000000.svg?style=flat&logo=JSON&logoColor=white" alt="JSON">
-
 </div>
 <br>
 
@@ -38,11 +36,11 @@ Smart contract development and deployment on the Sepolia testnet
 
 🛠️ Tech Stack & Tools
 Component	      Description
-Solidity	      Smart contract programming language
-Remix IDE	      Web-based IDE for Solidity development
-MetaMask	      Wallet used for deploying and transacting
-Sepolia         Testnet	Ethereum test network for testing
-Chainlink	      Oracle network to fetch ETH/USD and BTC/USD prices
+Solidity	      Smart contract programming language, 
+Remix IDE	      Web-based IDE for Solidity development, 
+MetaMask	      Wallet used for deploying and transacting, 
+Sepolia         Testnet	Ethereum test network for testing, 
+Chainlink	      Oracle network to fetch ETH/USD and BTC/USD prices, 
 OpenZeppelin  	Standard ERC-20 token implementation
 
 ---
@@ -73,6 +71,8 @@ Calculates how much sBTC to mint
 
 Mints and assigns tokens to the sender
 
+---
+
 ✅ What Was Achieved
 Contract successfully deployed and verified on Sepolia
 
@@ -81,6 +81,8 @@ Live Chainlink oracles integrated
 ETH deposited → real-time price logic executed → sBTC minted
 
 Transactions and token balance confirmed on Etherscan
+
+---
 
 🧠 Key Learnings
 Precision matters: tiny ETH amounts can result in zero tokens minted due to Solidity’s integer math
